@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    path: app-of-apps/apps
+    repoURL: https://github.com/abicky/argocd-example-apps.git
+    targetRevision: test
