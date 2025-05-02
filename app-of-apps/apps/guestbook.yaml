@@ -13,4 +13,5 @@ spec:
     repoURL: https://github.com/abicky/argocd-example-apps.git
     targetRevision: test
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
